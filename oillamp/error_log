@@ -1,0 +1,4 @@
+[15-Feb-2018 10:35:38 UTC] PHP Fatal error:  Class 'App\Http\Controllers\Mail' not found in /home/webdwyhr/public_html/shale.ai/app/Http/Controllers/AdminController.php on line 213
+[15-Feb-2018 10:49:11 UTC] PHP Fatal error:  Class 'App\Http\Controllers\Input' not found in /home/webdwyhr/public_html/shale.ai/app/Http/Controllers/AdminController.php on line 224
+[15-Feb-2018 10:49:57 UTC] PHP Fatal error:  Class 'Input' not found in /home/webdwyhr/public_html/shale.ai/app/Http/Controllers/AdminController.php on line 226
+[16-Feb-2018 07:25:40 UTC] PHP Fatal error:  Class 'App\Http\Controllers\DB' not found in /home/webdwyhr/public_html/shale.ai/app/Http/Controllers/UserController.php on line 78

@@ -1,0 +1,110 @@
+/*Header css start*/
+a:hover{
+    text-decoration: none;
+}
+section.header {
+    background: #f0c85a;
+}
+.inner-header-right {
+    float: right;
+    padding: 25px 0px;
+}
+.inner-header-right form {
+    background: #323232;
+    padding: 5px;
+    border-radius: 5px;
+}
+.inner-header-right button {
+    background: #323232;
+    border: 0px;
+    color: #fff;
+}
+.inner-cart {
+    padding: 21px 0px;
+}
+.inner-cart p {
+    display: inline-block;
+}
+.custom-titele ul li a {
+    color: #fff;
+    font-size: 16px;
+}
+.custom-titele ul li {
+    list-style-type: none;
+    display: inline-block;
+        padding: 0px 20px;
+}
+.custom-titele ul {
+    float: right;
+    padding: 0px;
+    margin: 0px;
+}
+section.all-page-title {
+    background: #000;
+    padding: 10px 0px;
+}
+.pre-page a {
+    color: #f0c85a !important;
+}
+/*Header css end*/
+/*lOGIN css START*/
+.custom-border-full {
+    border: 1px solid #d6d6d6;
+    margin: 30px 0px;
+    padding: 30px;
+}
+.login-form .form-control {
+    border-radius: 0px;
+    height: 40px;
+}
+.login-form button {
+    font-size: 16px;
+    border-radius: 0px;
+    border: 0px;
+    padding: 10px 24px;
+    background: #e0ac24;
+    color: #000;
+    font-weight: bold;
+}
+.login-form button i {
+    padding-right: 10px;
+}
+.login-form .checkbox {
+    padding: 15px 0px;
+}
+.inner-solcial-right button {
+    width: 200px;
+    text-align: left;
+    padding: 11px 0px;
+    font-size: 19px;
+}
+.inner-solcial-right p i {
+    padding: 0px 25px 0px 25px;
+}
+/*lOGIN css end*/
+
+
+/*FOOTER CSS*/
+.footer-menu {
+    background: #000;
+    text-align: center;
+}
+.footer-menu ul li a {
+    color: #fff;
+    font-size: 16px;
+}
+.footer-menu ul li {
+    float: left;
+    padding: 0px 20px;
+    list-style-type: none;
+}
+.footer-menu ul {
+    display: inline-block;
+    margin: 0;
+    padding: 15px 0px;
+    text-align: center;
+}
+.footer-logo {
+    background: #f0c85a;
+    padding: 20px 0px;
+}
