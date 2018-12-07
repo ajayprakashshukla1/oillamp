@@ -117,32 +117,11 @@ public function test(){
         header('Location: '. $url);
         exit;
     }
-
-    if(isset($_REQUEST['oauth_verifier']))
-        $oauth_verifier=$_REQUEST['oauth_verifier'];
-    else
-        $oauth_verifier='';
-
-    define('CONSUMER_KEY', 'JkJwlSHe0tN0odr4pyqeHuOw8');
-    define('CONSUMER_SECRET', 'vaPFFpvuWDNssdR9PIWTtkqyvhk1UNBqzs79TF7DYSQGPohtLd');
-    define('OAUTH_CALLBACK', 'http://localhost/twitter_login/twitter_callback.php');
-
-    $request_token = [];
-    $request_token['oauth_token'] = session('oauth_token');
-    $request_token['oauth_token_secret'] = session('oauth_token_secret');
-
-    $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $request_token['oauth_token'], $request_token['oauth_token_secret']);
-
-    $access_token = $connection->oauth("oauth/access_token", ["oauth_verifier" => $oauth_verifier]);
-
-    $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $access_token['oauth_token'], access_token);
-
-    $user = $connection->get('account/verify_credentials', ['tweet_mode' => 'extended', 'include_entities' => 'true']);
-
-    echo "<pre>";
-    print_r($user);
-
     
+}
+
+public function test1(){
+
 }
 
 //===============================================  

@@ -23,6 +23,7 @@ class UserController extends Controller
 
     public function login(Request $request){
         $data=$request->input();
+		echo "hello"; exit;
         if(count($data)){
            if(Auth::attempt(['email' => $request->input('email'), 'password' => $request->input('password')])){ 
               return redirect('/dashboard');

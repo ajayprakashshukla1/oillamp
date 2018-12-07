@@ -1,28 +1,47 @@
 @extends('layouts.app')
+
 @section('content')
-            
-            <!-- BEGIN FORGOT PASSWORD FORM -->
-                {!! Form::open(['class'=>'forget-form','url'=>route('password.email'), 'method'=>'post','style'=>'display: block']) !!}
-               {{ csrf_field() }}
-                <div class="form-title">
-                    <span class="form-title">Forget Password ?</span>
-                    <span class="form-subtitle">Enter your e-mail to reset it.</span>
-                </div>
-                <div class="form-group {{ $errors->has('email') ? ' has-error' : '' }}">
-                    {!! Form::email('email', $value = null, $attributes = ['class'=>'form-control placeholder-no-fix', 'autocomplete'=>'off' ,'placeholder'=>'company email' ]) !!}
-                    @if ($errors->has('email'))
-                                    <span class="help-block">
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">{{ __('Reset Password') }}</div>
+
+                <div class="card-body">
+                    @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('status') }}
+                        </div>
+                    @endif
+
+                    <form method="POST" action="{{ route('password.email') }}">
+                        @csrf
+
+                        <div class="form-group row">
+                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
+
+                                @if ($errors->has('email'))
+                                    <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('email') }}</strong>
                                     </span>
-                     @endif
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row mb-0">
+                            <div class="col-md-6 offset-md-4">
+                                <button type="submit" class="btn btn-primary">
+                                    {{ __('Send Password Reset Link') }}
+                                </button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                <div class="form-actions">
-                    <a type="button" href="{{ route('login') }}" id="back-btn" class="btn btn-default">Back</a>
-                    {!! Form::submit('Submit',['class'=>'btn btn-primary uppercase pull-right']); !!}
-                </div>
-            </form>
-            <!-- END FORGOT PASSWORD FORM -->
-            <!-- BEGIN REGISTRATION FORM -->
-          
-            <!-- END REGISTRATION FORM -->
-       @endsection
+            </div>
+        </div>
+    </div>
+</div>
+@endsection

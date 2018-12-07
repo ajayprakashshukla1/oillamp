@@ -1,4 +1,5 @@
 <?php
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -10,14 +11,16 @@
 |
 */
 
+
 Route::get('/',function(){
     return  redirect('/login');
 });
 
-$this->get('login', 'Auth\LoginController@showLoginForm')->name('login');
-Route::post('/login','UserController@login');
+//$this->get('login', 'Auth\LoginController@showLoginForm')->name('login');
+//Route::post('/login','UserController@login');
 
 $this->get('/dashboard', 'HomeController@dashboard');
+$this->get('admin/dashboard', 'AdminController@dashboard');
 
 
 $this->get('/registration', 'UserController@registration');
@@ -50,8 +53,15 @@ Route::get('/logout',function(){
 Route::get('/home', function(){
   return redirect('/dashboard');
 });
+?>
 
 
+<?php /*
+Route::get('/', function () {
+    return view('welcome');
+});
 
+Auth::routes();
 
-
+Route::get('/home', 'HomeController@index')->name('home');
+*/ ?>
